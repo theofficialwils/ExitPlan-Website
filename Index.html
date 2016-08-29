@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="shortcut icon" href="../favicon.ico"> 
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Teko">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/page-transition.js"></script>
+</head>
+<body onload="fadeIn()">
+	<div id="bigfat-container">
+	<div id="transition">
+	</div>
+
+	<div id="foreground">
+		<img id="exitplan-logo" src="images/exitplanlogo.png" alt="exitplan logo">
+		<div id="nav-container">
+		<ul class="nav">
+			<li><a class="nav-current" id="index.html">Home</a></li>
+			<li><a class="transition-white" id="shop.html">Shop</a></li>
+			<li><a class="transition-black" id="lookbook.html">lookbook</a></li>
+			<li><a class="transition-black" id="about.html">About</a></li>
+			<li><a class="nav-link" id="#contact">Contact</a></li>
+		</ul>
+		</div>
+
+		<div id="social-container">
+		<ul class="social">
+			<li><a href="https://www.facebook.com/exitplanclothing/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+			<li><a href="https://twitter.com/ExitPlanApparel"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.instagram.com/exitplanclothing"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+		</ul>
+		</div>
+	</div>
+
+	<ul class="cb-slideshow">
+		<li><span>Image 01</span></li>
+		<li><span>Image 02</span></li>
+		<li><span>Image 03</span></li>
+		<li><span>Image 04</span></li>
+		<li><span>Image 05</span></li>
+		<li><span>Image 06</span></li>
+	</ul>
+
+	</div>
+	<script type="text/javascript">
+		function fadeIn(){
+			$('#bigfat-container').animate({opacity: '1'},5000);
+		}
+	</script>
+</body>
+</html>
