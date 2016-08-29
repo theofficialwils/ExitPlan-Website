@@ -29,4 +29,16 @@ $(document).ready(function(){
 	       window.location.href = id;
 	    }, 3000);
     }
+
+    $('.nav-link').click(function() {
+        $("#contact-popup").animate({height: '0%'},0);
+        $("#contact-popup").animate({opacity: '1'},0);
+        $("#contact-popup").show();
+        $("#contact-popup").animate({height: '85%'},1000);
+    });
+
+    $('#close-popup').click(function() {
+        $("#contact-popup").animate({opacity: '0'},1000);
+        $("#contact-popup").delay(1).hide(0);
+    });
 });
