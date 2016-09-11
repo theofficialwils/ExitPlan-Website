@@ -7,10 +7,6 @@ body{
     overflow:hidden;
 }
 
-#bigfat-container{
-    opacity: 0;
-}
-
 h1{
     font-family: 'Teko', sans-serif;
     font-size: 3em;
@@ -29,6 +25,13 @@ h2{
 ul{
     text-decoration:none;
     list-style: none;
+    padding: 0;
+}
+
+#body-container{
+    width:100%;
+    height:100%;
+    opacity:0;
 }
 
 /*=========Transition=========*/
@@ -57,15 +60,27 @@ ul{
 /*=========Pop-up=========*/
 /*========================*/
 
+#contact-outer{
+    z-index:59;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgb(0,0,0);
+    display: none;
+    opacity: 0;
+}
+
 #contact-popup{
     z-index:60;
     position: absolute;
     width: 85%;
-    height: 85%;
+    height: 0%;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    background: #292929;
+    background: #222;
     display: none;
 }
 
@@ -103,7 +118,6 @@ ul{
 #contact-social-container{
     position: absolute;
     width:100%;
-    left:-20px;
 }
 
 .contact-social{
@@ -112,11 +126,12 @@ ul{
 }
 .contact-social li{
     display:inline;
+    margin:auto;
 }
 .contact-social i{
     display:inline-block;
+    padding:0px 5px;
     font-size: 2.8em;
-    margin:0 2.5%;
     color:white;
     transition: all 0.4s ease-in-out;
 }
@@ -152,24 +167,46 @@ ul{
     bottom:0;
     text-align:center;
     list-style: none;
-
 }
 .nav li{
-    display:inline;
+    display:block;
+    margin:10px;
 
 }
 .nav a{
-    display:inline-block;
-    margin:1.6% 1.4%;
-    padding:0% 0.35%;
+    padding:0px 20px;
+    background:white;
+
     text-decoration:none;
     font-family: 'Teko', sans-serif;
     font-weight: bold;
     font-size: 2.4em;
-    transition: all 0.4s ease-in-out;
+    color:black;
+
+    transition: color 0.4s ease-in-out;
+    transition: bottom 0.7s ease-in-out;
 }
 
 .nav a:hover{
+    color:#F9480F;
+}
+
+.nav-item{
+    position: relative;
+    bottom:-500px;
+}
+
+.nav i{
+    padding:0px 20px;
+
+    text-decoration:none;
+    font-size: 2.4em;
+    color:white;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.nav i:hover{
     color:#F9480F;
 }
 
@@ -182,15 +219,49 @@ ul{
 
 .social{
     list-style: none;
+    margin: 10px 0px 0px 30px;
 }
 .social i{
     float:left;
-    padding:0.5%;
-    font-size: 1.8em;
+    padding: 10px;
+    font-size: 2.5em;
     transition: all 0.4s ease-in-out;
+    color:white;
 }
 
 .social i:hover{
     color:#F9480F;
 }
 
+@media only screen and (min-width:800px){
+    .nav{
+        bottom:0;
+        text-align:center;
+        list-style: none;
+
+    }
+    .nav li{
+        display:inline;
+        margin:1.6% 1.4%;
+    }
+    .nav a{
+        background: none;
+        display:inline-block;
+        padding:0% 0.35%;
+        color:white;
+    }
+
+    .nav-item{
+        bottom:0px;
+    }
+
+    .nav i{
+        display:none;
+    }
+
+    .social i{
+        padding:5px;
+        font-size: 1.8em;
+    }
+
+}

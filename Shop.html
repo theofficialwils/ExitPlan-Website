@@ -17,8 +17,7 @@
 	<script src="js/page-transition.js"></script>
 </head>
 <body onload="fadeIn()">
-	<div id="bigfat-container">
-
+<div id="body-container">
 	<div id="contact-popup">
 		<div id="contact-text-container">
 			<h1 class="contact-text">EXIT PLAN</h1>
@@ -73,11 +72,12 @@
 
 		<div id="nav-container">
 		<ul class="nav">
-			<li><a class="transition-black" id="index.html">Home</a></li>
-			<li><a class="nav-current" id="shop.html">Shop</a></li>
-			<li><a class="transition-black" id="lookbook.html">lookbook</a></li>
-			<li><a class="transition-black" id="about.html">About</a></li>
-			<li><a class="nav-link" id="#contact">Contact</a></li>
+			<li class="nav-item"><a class="transition-black" id="index.html">Home</a></li>
+			<li class="nav-item"><a class="nav-current" id="shop.html">Shop</a></li>
+			<li class="nav-item"><a class="transition-black" id="lookbook.html">lookbook</a></li>
+			<li class="nav-item"><a class="transition-black" id="about.html">About</a></li>
+			<li class="nav-item"><a class="nav-link" id="#contact">Contact</a></li>
+			<li><i id="mobile-menu" class="fa fa-bars" aria-hidden="true"></i></li>
 		</ul>
 		</div>
 
@@ -101,29 +101,26 @@
 		<div id="slide-5" class="slide"><img class="slide-image" src="images/shirt5.png" alt="clothing"></div>
 		<div id="slide-6" class="slide"><img class="slide-image" src="images/jumper1.png" alt="clothing"></div>
 	</div>
-
-	</div>
+</div>
+	<script src="js/nav.js"></script>
 	<script type="text/javascript">
 		function fadeIn(){
-			$('#bigfat-container').animate({opacity: '1'},2000);
+			$('#body-container').animate({opacity: '1'},2000);
 		}
 
 		$(function() {
-		  $('.slide').hover(function() {
-		    $(this).find('.slide-header').animate({bottom: '40%'},0);
-		    $(this).find('.slide-text').delay(500).animate({height: '40%'},0);
-		    $(this).find('.slide-text').animate({bottom: '0%'},0);
-		    $(this).find('.slide-text p').delay(1000).animate({opacity: '1'},0);
-		    $(this).find('.slide-text a').delay(1000).animate({opacity: '1'},0);
-		    $(this).find('.darken').animate({opacity: '0.5'},0);
-		  }, function() {
-		    // on mouseout, reset the background colour
+		  $('.slide').hover(function() { //on hover
+		    $(this).find('.slide-header').animate({bottom: '57%'},0);
+		    $(this).find('.slide-text').stop().animate({top: '-100%'},0);
+		    $(this).find('.slide-text').stop().animate({top: '0%'},700);
+		    $(this).find('.slide-text p').delay(600).animate({opacity: '1'},0);
+		    $(this).find('.slide-text a').delay(600).animate({opacity: '1'},0);
+		    $(this).find('.darken').animate({opacity: '0.8'},0);
+		  }, function() { //off hover
 		    $(this).find('.slide-header').animate({bottom: '-10%'},0);
-		    $(this).find('.slide-text p').animate({opacity: '0'},0);
-		    $(this).find('.slide-text a').animate({opacity: '0'},0);
-		    $(this).find('.slide-text').animate({bottom: '-40%'},0);
-		    $(this).find('.slide-text').animate({height: '0%'},0);
-		    $(this).find('.slide-text').delay(500).animate({bottom: '40%'},0);
+		    $(this).find('.slide-text p').stop().animate({opacity: '0'},0);
+		    $(this).find('.slide-text a').stop().animate({opacity: '0'},0);
+		    $(this).find('.slide-text').stop().animate({top: '100%'},550);    
 		    $(this).find('.darken').animate({opacity: '0'},0);
 		  });
 		});

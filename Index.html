@@ -17,10 +17,11 @@
 	<script src="js/page-transition.js"></script>
 </head>
 <body onload="fadeIn()">
-	<div id="bigfat-container">
+<div id="body-container">
 	<div id="transition">
 	</div>
 
+	<div id="contact-outer"></div>
 	<div id="contact-popup">
 		<div id="contact-text-container">
 			<h1 class="contact-text">EXIT PLAN</h1>
@@ -39,13 +40,15 @@
 
 	<div id="foreground">
 		<img id="exitplan-logo" src="images/exitplanlogo.png" alt="exitplan logo">
+
 		<div id="nav-container">
 		<ul class="nav">
-			<li><a class="nav-current" id="index.html">Home</a></li>
-			<li><a class="transition-white" id="shop.html">Shop</a></li>
-			<li><a class="transition-black" id="lookbook.html">lookbook</a></li>
-			<li><a class="transition-black" id="about.html">About</a></li>
-			<li><a class="nav-link" id="#contact">Contact</a></li>
+			<li class="nav-item"><a class="nav-current" id="index.html">Home</a></li>
+			<li class="nav-item"><a class="transition-white" id="shop.html">Shop</a></li>
+			<li class="nav-item"><a class="transition-black" id="lookbook.html">lookbook</a></li>
+			<li class="nav-item"><a class="transition-black" id="about.html">About</a></li>
+			<li class="nav-item"><a class="nav-link" id="#contact">Contact</a></li>
+			<li><i id="mobile-menu" class="fa fa-bars" aria-hidden="true"></i></li>
 		</ul>
 		</div>
 
@@ -66,11 +69,11 @@
 		<li><span>Image 05</span></li>
 		<li><span>Image 06</span></li>
 	</ul>
-
-	</div>
+</div>
+	<script src="js/nav.js"></script>
 	<script type="text/javascript">
 	    function fadeIn(){
-	        $('#bigfat-container').animate({opacity: '1'},3500);
+	        $('#body-container').animate({opacity: '1'},5000);
 	    }
 	</script>
 </body>

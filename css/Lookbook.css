@@ -7,13 +7,7 @@ body{
 /*=========Foreground=========*/
 /*========================*/
 
-.nav a{
-    color:white;
-}
 
-.social i{
-    color:white;
-}
 
 #right-arrow{
     position: absolute;
@@ -213,8 +207,12 @@ body{
 .slide-image-full{
     position: absolute;
     display: block;
-    width:100%;
+    max-width:100%;
+    max-height:100%;
     opacity:0;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
 
 #slide-1 .slide-image{left:35%;}

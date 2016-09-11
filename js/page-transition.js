@@ -31,14 +31,21 @@ $(document).ready(function(){
     }
 
     $('.nav-link').click(function() {
-        $("#contact-popup").animate({height: '0%'},0);
-        $("#contact-popup").animate({opacity: '1'},0);
+        //reset
+        $("#contact-popup").animate({width: '85%', height: '0%'},0);
+        $("#contact-text-container").animate({opacity: '1'},0); 
+
         $("#contact-popup").show();
         $("#contact-popup").animate({height: '85%'},1000);
+        $("#contact-outer").show();
+        $("#contact-outer").animate({opacity: '0.8'},1000);
     });
 
     $('#close-popup').click(function() {
-        $("#contact-popup").animate({opacity: '0'},1000);
+        $("#contact-outer").animate({opacity: '0'},500);
+        $("#contact-outer").delay(1).hide(0);
+        $("#contact-popup").animate({width: '0%'},500);
+        $("#contact-text-container").animate({opacity: '0'},300);  
         $("#contact-popup").delay(1).hide(0);
     });
 });
