@@ -11,7 +11,7 @@ body{
 
 #right-arrow{
     position: absolute;
-    right:1%;
+    right:0.25%;
     top:50%;
     transform: translateY(-50%);
     margin-right: 15px;
@@ -27,13 +27,13 @@ body{
 }
 
 #right-arrow:hover{
-    right:0.75%;
+    right:0%;
     border-color: transparent transparent transparent #F9480F;
 }
 
 #left-arrow{
     position: absolute;
-    left:1%;
+    left:0.25%;
     top:50%;
     transform: translateY(-50%);
     margin-left: 15px;
@@ -49,7 +49,7 @@ body{
 }
 
 #left-arrow:hover{
-    left:0.75%;
+    left:0%;
     border-color: transparent #F9480F transparent transparent;
 }
 
