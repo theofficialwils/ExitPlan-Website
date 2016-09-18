@@ -62,14 +62,15 @@
 		<div id="about-image-container">
 			<img id="about-image" src="images/4.png">
 		</div>
-
-		<div id="about-text">
-			<h2>ABOUT</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et tortor eu elit egestas cursus ac ac ligula. Integer et purus arcu. Duis id suscipit mi, non sollicitudin velit. Morbi dignissim viverra neque non maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean ac tristique ligula. Curabitur tempus sapien ut sodales placerat.<br><br>
-
-			Nulla pellentesque lacus nunc, sed tristique nunc tristique nec. Donec pulvinar pretium sagittis. Sed porta venenatis magna, eu congue magna dapibus et. Pellentesque ut metus viverra, volutpat turpis id, gravida purus. Maecenas sagittis volutpat purus vitae varius. Nulla ut dictum nisl. Cras sed odio sit amet velit blandit rhoncus quis tempor nunc.<br><br>
-
-			Maecenas scelerisque lectus ex, nec porta quam iaculis nec. Curabitur eu arcu in quam bibendum tincidunt ac id felis. Pellentesque dictum sit amet ligula id auctor. Duis accumsan mollis neque, sed malesuada quam pretium a. Sed ac egestas ligula. Nullam a turpis pharetra, placerat nisl eget, consequat dui. Fusce eleifend nunc sed ante pharetra suscipit. Nam a ipsum nibh. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eleifend, sapien eu ultrices iaculis, velit velit posuere risus, id rutrum felis est eget orci.</p>
+		<div id="about-text-container">
+			<div id="about-text">
+				<h2>ABOUT</h2>
+				<p>Parkour is our passion; we live, sleep and breathe it. As a result, we want to wear clothes that tell the world that this is who we are and what we do. So, we decided to build a brand which used clear, sharp, minimalist imagery to make us stand out in the crowd and show our passion for the sport. 
+				<br><br>
+				We also have strong ethics and care deeply about the environment, so we ensure that all the clothing we produce fits these ideals. Every item is made sustainably and comes from ethical sources. 
+				<br><br>
+				All our designs, the images we take and the stories that we tell are focused on our principles, making sure that when you are decked in our gear it’s clear what you stand for.</p>
+			</div>
 		</div>
 </div>
 	<script src="js/nav.js"></script>
@@ -129,6 +130,10 @@
 	    $("#left-arrow").click(function(){
 	    	moveLeft(6);
 	    });
+
+	    var parent = document.getElementById('about-text-container');
+		var child = document.getElementById('about-text');
+		child.style.right = child.clientWidth - child.offsetWidth + "px";
 	</script>
 </body>
 </html>
