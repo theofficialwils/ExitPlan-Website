@@ -1,0 +1,267 @@
+/*=========GLOBAL=========*/
+/*========================*/
+
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+h1{
+    font-family: 'Teko', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color:white;
+}
+
+h2{
+    font-family: 'Teko', sans-serif;
+    font-size: 2.0em;
+    font-weight: bold;
+    color:white;
+    transition: all 0.4s ease-in-out;
+}
+
+ul{
+    text-decoration:none;
+    list-style: none;
+    padding: 0;
+}
+
+#body-container{
+    width:100%;
+    height:100%;
+    opacity:0;
+}
+
+/*=========Transition=========*/
+/*========================*/
+
+#transition{
+    display: none;
+    z-index:50;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+}
+
+.background-change{
+    position: absolute;
+    width:20%;
+    height: 100%;
+    left:0;
+    top:100%;
+    background: white;
+    opacity:0.8;
+}
+
+/*=========Pop-up=========*/
+/*========================*/
+
+#contact-outer{
+    z-index:59;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgb(0,0,0);
+    display: none;
+    opacity: 0;
+}
+
+#contact-popup{
+    z-index:60;
+    position: absolute;
+    width: 85%;
+    height: 0%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: #222;
+    display: none;
+}
+
+#close-popup i{
+    position: absolute;
+    top:4%;
+    right:4%;
+    font-size: 2.5em;
+    transition: all 0.4s ease-in-out;
+    color:white;
+}
+
+#close-popup i:hover{
+    color:#F9480F;
+}
+
+.contact-text{
+    text-align: center;
+}
+
+#contact-text-container{
+    position: relative;
+    top:40%;
+    transform: translateY(-50%);
+}
+
+#contact-text-container a{
+    text-decoration: none;
+}
+
+#contact-text-container h2:hover{
+    color:#F9480F;
+}
+
+#contact-social-container{
+    position: absolute;
+    width:100%;
+}
+
+.contact-social{
+    text-align:center;
+    list-style: none;
+}
+.contact-social li{
+    display:inline;
+    margin:auto;
+}
+.contact-social i{
+    display:inline-block;
+    padding:0px 5px;
+    font-size: 2.8em;
+    color:white;
+    transition: all 0.4s ease-in-out;
+}
+
+.contact-social i:hover{
+    color:#F9480F;
+}
+
+
+/*=========Foreground=========*/
+/*========================*/
+
+#foreground{
+    z-index:30;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    visibility: hidden;
+}
+
+#nav-container{
+    position: absolute;
+    width:100%;
+    bottom:0;
+    visibility: visible;
+}
+
+.nav{
+    bottom:0;
+    text-align:center;
+    list-style: none;
+}
+.nav li{
+    display:block;
+    margin:10px;
+
+}
+.nav a{
+    padding:0px 20px;
+    background:white;
+
+    text-decoration:none;
+    font-family: 'Teko', sans-serif;
+    font-weight: bold;
+    font-size: 2.4em;
+    color:black;
+
+    transition: color 0.4s ease-in-out;
+    transition: bottom 0.7s ease-in-out;
+}
+
+.nav a:hover{
+    color:#F9480F;
+}
+
+.nav-item{
+    position: relative;
+    bottom:-500px;
+}
+
+.nav i{
+    padding:0px 20px;
+
+    text-decoration:none;
+    font-size: 2.4em;
+    color:white;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.nav i:hover{
+    color:#F9480F;
+}
+
+#social-container{
+    position: absolute;
+    width:100%;
+    top:0;
+    visibility: visible
+}
+
+.social{
+    list-style: none;
+    margin: 10px 0px 0px 30px;
+}
+.social i{
+    float:left;
+    padding: 10px;
+    font-size: 2.5em;
+    transition: all 0.4s ease-in-out;
+    color:white;
+}
+
+.social i:hover{
+    color:#F9480F;
+}
+
+@media only screen and (min-width:800px){
+    .nav{
+        bottom:0;
+        text-align:center;
+        list-style: none;
+
+    }
+    .nav li{
+        display:inline;
+        margin:1.6% 1.4%;
+    }
+    .nav a{
+        background: none;
+        display:inline-block;
+        padding:0% 0.35%;
+        color:white;
+    }
+
+    .nav-item{
+        bottom:0px;
+    }
+
+    .nav i{
+        display:none;
+    }
+
+    .social i{
+        padding:5px;
+        font-size: 1.8em;
+    }
+
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Exit Plan</title>
+        <meta name="google-site-verification" content="hnACFoiV_0QxGTODChWzOMR0SeQfom1p8m8JPp-fPxA" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+   		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Homenaje|EB+Garamond" rel="stylesheet">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    </head>
+    <body onload="homeSlides()">
+
+        <div id="home-slide-container">
+        	<div class="home-slide">
+                <div class="darken"></div>
+                <h1>Exit Plan Clothing</h1>
+                <p>Parkour and Freerunning Clothing</p>
+            </div>
+        	<div class="home-slide">
+                <div class="darken"></div>
+                <h1>Quality Products</h1>
+                <p>We strive to deliver quality across our line</p>
+            </div>
+        	<div class="home-slide">
+                <div class="darken"></div>
+                <h1>Passion for Parkour</h1>
+                <p>We live and breathe parkour</p>
+            </div>
+        	<div class="home-slide">
+                <div class="darken"></div>
+                <h1>Ethically Made Clothes</h1>
+                <p>We make sure that all our clothes are ethically made</p>
+            </div>
+        	<div class="home-slide">
+                <div class="darken"></div>
+                <h1>Excellent Minimalist Design</h1>
+                <p>A love for minimalism shines through in our great designs</p>
+            </div>
+        	<div class="home-slide">
+                <div class="darken"></div>
+                <h1>Performance Focused Clothing</h1>
+                <p>We make sure that all our clothes allow you to perform at your best</p>
+            </div>
+        </div>
+
+        <div id="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="portfolio.html">Lookbook</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li id="contact"><a href="#">Contact</a></li>
+            </ul>
+
+            <div id="contact-info">
+                <p>Email: info@exitplanclothing.com</p>
+                <p>Tel: +44 (0)7835 248 548</p>
+                <div id="contact-cross">
+                    <div id="contact-cross-line1"></div>
+                    <div id="contact-cross-line2"></div>
+                </div>
+            </div>
+
+            <a href="https://www.facebook.com/exitplanclothing"><i id="facebook" class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/ExitPlanApparel"><i id="twitter" class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/exitplanclothing"><i id="instagram" class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+
+        <a href="#"><div id="burger-menu">
+            <div id="line1" class="line"></div>
+            <div id="line2" class="line"></div>
+            <div id="line3" class="line"></div>
+        </div></a>
+
+        <img id="logo" src="images/logo.png" alt="logo">
+
+		<script src="js/main.js"></script>
+		<script type="text/javascript">
+			function homeSlides() {
+			    var slideCounter = 1;
+				function homeSlideAnim() {
+					$( "#home-slide-container .home-slide:nth-child("+slideCounter+")").animate({opacity: '1'},1);
+
+                    $( "#home-slide-container .home-slide:nth-child("+slideCounter+") h1").delay(1000).animate({opacity: '1', marginLeft: '0px'},1);
+                    $( "#home-slide-container .home-slide:nth-child("+slideCounter+") p").delay(1000).animate({opacity: '1', marginLeft: '0px'},1);
+
+                    $( "#home-slide-container .home-slide:nth-child("+slideCounter+") h1").delay(7000).animate({opacity: '0', marginLeft: '50px'},1);
+                    $( "#home-slide-container .home-slide:nth-child("+slideCounter+") p").delay(7000).animate({opacity: '0', marginLeft: '50px'},1);
+
+					$( "#home-slide-container .home-slide:nth-child("+slideCounter+")").delay(8000).animate({opacity: '0'},1);
+					slideCounter = slideCounter+1;	
+				  	if(slideCounter==7){
+				  		slideCounter = 1;
+				  	}
+				  	$("#home-slide-container .home-slide:nth-child("+slideCounter+")").delay(5000).animate({opacity: '1'},1, homeSlideAnim);
+				}
+				homeSlideAnim();
+			}
+            
+
+            var burgerClicked=0;
+
+            $("#burger-menu").click(function() {
+                if (burgerClicked==0){
+                    burgerClicked=1;
+                }else{
+                    burgerClicked=0;
+                }
+            });
+
+            if(window.innerWidth>700){
+                $("#navbar").delay(500).animate({marginLeft: '-60px'},1);
+                $("#burger-menu").delay(500).animate({left: '-60px'},1);
+                $("#logo").delay(500).animate({left: '-60px'},1);
+            }
+
+            $( "#navbar" ).hover(
+                function() {
+                    if(burgerClicked==0 && window.innerWidth>700){
+                        $("#navbar").animate({marginLeft: '0px'},1);
+                        $("#burger-menu").animate({left: '0px'},1);
+                        $("#logo").animate({left: '0px'},1);
+                    }
+                }, function() {
+                    if(burgerClicked==0 && window.innerWidth>700){
+                        $("#navbar").animate({marginLeft: '-60px'},1);
+                        $("#burger-menu").animate({left: '-60px'},1);
+                        $("#logo").animate({left: '-60px'},1);
+                    }
+                }
+            );
+            $( "#burger-menu" ).hover(
+                function() {
+                    if(burgerClicked==0 && window.innerWidth>700){
+                        $("#navbar").animate({marginLeft: '0px'},1);
+                        $("#burger-menu").animate({left: '0px'},1);
+                        $("#logo").animate({left: '0px'},1);
+                    }
+                }, function() {
+                    if(burgerClicked==0 && window.innerWidth>700){
+                        $("#navbar").animate({marginLeft: '-60px'},1);
+                        $("#burger-menu").animate({left: '-60px'},1);
+                        $("#logo").animate({left: '-60px'},1);
+                    }
+                }
+            );
+
+            $( "#logo" ).hover(
+                function() {
+                    if(burgerClicked==0 && window.innerWidth>700){
+                        $("#navbar").animate({marginLeft: '0px'},1);
+                        $("#burger-menu").animate({left: '0px'},1);
+                        $("#logo").animate({left: '0px'},1);
+                    }
+                }, function() {
+                    if(burgerClicked==0 && window.innerWidth>700){
+                        $("#navbar").animate({marginLeft: '-60px'},1);
+                        $("#burger-menu").animate({left: '-60px'},1);
+                        $("#logo").animate({left: '-60px'},1);
+                    }
+                }
+            );
+
+            $( window ).resize(function() {
+                if(window.innerWidth<700){
+                    $("#navbar").delay(500).animate({marginLeft: '0px'},1);
+                    $("#burger-menu").delay(500).animate({left: '0px'},1);
+                }
+            });
+		</script>
+    </body>
+</html>
+
+
+
+
+
+
+
