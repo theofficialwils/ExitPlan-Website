@@ -1,32 +1,30 @@
 
 $(document).ready(function() {
 
-
 	/////////////////////////
 	//Chevrons
 	/////////////////////////
-	$(document).ready(function() {
-		$( "#chevron-right .chevron-line:nth-child(1)").css('width' , '20px');
-		$( "#chevron-right .chevron-line:nth-child(2)").css('width' , '20px');
 
-		$( "#chevron-right .chevron-line:nth-child(1)").delay(300).animate({'top' : '16px'},0);
-		$( "#chevron-right .chevron-line:nth-child(2)").delay(300).animate({'top' : '28px'},0);
-		setTimeout( function(){
-	      $( "#chevron-right .chevron-line:nth-child(1)").css({'transform':'rotate(45deg)'},0);
-	      $( "#chevron-right .chevron-line:nth-child(2)").css({'transform':'rotate(-45deg)'},0);
-	    },600);
+	$( "#chevron-right .chevron-line:nth-child(1)").css('width' , '20px');
+	$( "#chevron-right .chevron-line:nth-child(2)").css('width' , '20px');
+
+	$( "#chevron-right .chevron-line:nth-child(1)").delay(300).animate({'top' : '16px'},0);
+	$( "#chevron-right .chevron-line:nth-child(2)").delay(300).animate({'top' : '28px'},0);
+	setTimeout( function(){
+      $( "#chevron-right .chevron-line:nth-child(1)").css({'transform':'rotate(45deg)'},0);
+      $( "#chevron-right .chevron-line:nth-child(2)").css({'transform':'rotate(-45deg)'},0);
+    },600);
 
 
-		$( "#chevron-left .chevron-line:nth-child(1)").css('width' , '20px');
-		$( "#chevron-left .chevron-line:nth-child(2)").css('width' , '20px');
+	$( "#chevron-left .chevron-line:nth-child(1)").css('width' , '20px');
+	$( "#chevron-left .chevron-line:nth-child(2)").css('width' , '20px');
 
-		$( "#chevron-left .chevron-line:nth-child(1)").delay(300).animate({'top' : '16px'},0);
-		$( "#chevron-left .chevron-line:nth-child(2)").delay(300).animate({'top' : '28px'},0);
-		setTimeout( function(){
-	      $( "#chevron-left .chevron-line:nth-child(1)").css({'transform':'rotate(-45deg)'},0);
-	      $( "#chevron-left .chevron-line:nth-child(2)").css({'transform':'rotate(45deg)'},0);
-	    },600);
-	});
+	$( "#chevron-left .chevron-line:nth-child(1)").delay(300).animate({'top' : '16px'},0);
+	$( "#chevron-left .chevron-line:nth-child(2)").delay(300).animate({'top' : '28px'},0);
+	setTimeout( function(){
+      $( "#chevron-left .chevron-line:nth-child(1)").css({'transform':'rotate(-45deg)'},0);
+      $( "#chevron-left .chevron-line:nth-child(2)").css({'transform':'rotate(45deg)'},0);
+    },600);
 
 
 
@@ -46,7 +44,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$("#contact-info").click(function() {
+	$("#contact-cross").click(function() {
 	  	if (contactClicked==1){
 		  	contactClicked=0;
 		  	
@@ -57,6 +55,16 @@ $(document).ready(function() {
 		}
 	});
 
+	$("#burger-menu").click(function() {
+	  	if (contactClicked==1){
+		  	contactClicked=0;
+		  	
+		  	$("#contact-info").delay(300).animate({opacity: 0},1);
+		  	$("#contact-cross").animate({opacity: 0},0);
+		  	$("#contact-info p").animate({opacity: 0},1);
+		  	$("#contact-info").delay(300).hide(0);
+		}
+	});
 
 
 

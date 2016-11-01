@@ -1,0 +1,255 @@
+body{
+  overflow-y: auto;
+}
+a{
+    text-decoration: none;
+}
+
+#logo{
+  z-index: 101;
+  position: fixed;
+}
+
+#burger-menu{
+  z-index: 101;
+  position: fixed;
+}
+
+#navbar{
+  z-index: 100;
+  position: fixed;
+}
+
+.section{
+  position: relative;
+  display: block;
+  top:100%;
+  text-align: center;
+  padding:0px 0px;
+}
+
+#blog-outer{
+  margin-bottom: 60px;
+}
+
+.section h2{
+  margin: 0px;
+
+  font-family: 'Homenaje', sans-serif;
+  font-size: 5em;
+}
+
+h3{
+  font-family: 'Homenaje', sans-serif;
+  font-size: 1.8em;
+}
+
+.section p{
+  width: 60%;
+  margin:auto;
+  margin-bottom: 40px;
+  font-family: 'EB Garamond', serif;
+}
+
+.section-break{
+  z-index: 1;
+  position: relative;
+  display: block;
+  width:100%;
+  height:15px;
+  background: black;
+  text-decoration: none;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.section-break h2{
+  position: absolute;
+  display: block;
+  top:10px;
+  left:50%;
+  transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+
+  padding: 10px 18px;
+  background: black;
+  color:white;
+  font-size: 2em;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.section-break:hover h2{
+  color:#F9480F;
+}
+
+#home-shop .shop-image{
+  position: relative;
+  display: inline-block;
+  width:33.33%;
+  height:400px;
+  margin:-6px -2px;
+
+  background:#1f1f1f;
+
+  transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (max-width:700px){
+  #home-shop .shop-image{
+    width:100%;
+  }
+}
+
+#home-shop .shop-image h4{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+
+  font-family: 'Homenaje', sans-serif;
+  font-size: 4em;
+  margin:0;
+
+  color:white;
+  opacity: 0;
+
+  transition: all 0.2s ease-in-out;
+}
+
+#home-shop  .shop-image-cover{
+  position: absolute;
+  display: block;
+  width:100%;
+  height:0%;
+
+  background:black;
+  opacity:0.8;
+
+  transition: all 0.4s ease-in-out;
+}
+
+.shop-image:hover h4{
+  opacity:1;
+}
+
+#home-shop a:nth-child(2) .shop-image{
+  background-image: url("../images/shirt1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#home-shop a:nth-child(3) .shop-image{
+  background-image: url("../images/shirt2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#home-shop a:nth-child(4) .shop-image{
+  background-image: url("../images/shirt3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.section .shop-image p{
+  position: relative;
+  top:-40px;
+  font-family: 'EB Garamond', serif;
+  color:#1f1f1f;
+}
+
+.home-link{
+  position: relative;
+  left:50%;
+  transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  display: block;
+  padding:5px;
+  margin:20px 0;
+  width:100px;
+  background:black;
+  font-family: 'Homenaje', sans-serif;
+  font-size: 1.4em;
+  color:white;
+  text-decoration: none;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.home-link:hover{
+  background:#F9480F;
+}
+
+.blog-link{
+  position: relative;
+  top:45px;
+  width:100px;
+  font-family: 'Homenaje', sans-serif;
+  font-size: 3em;
+  color:black;
+  text-decoration: none;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.blog-link:hover{
+  color:#F9480F;
+}
+
+#header-chevron{
+  position: absolute;
+  color:white;
+  font-size: 4em;
+
+  left:50%;
+  transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    bottom:30px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+#header-chevron:hover{
+  bottom:25px;
+}
+
+a{
+  cursor: pointer;
+}
+
+#footer{
+  display: block;
+  width:100%;
+  background: black;
+}
+
+#footer h2{
+  margin:0px;
+  padding:10px;
+  font-size: 1.4em;
+  color:white;
+
+  transition: all 0.2s ease-in-out;
+}
+
+#footer:hover h2{
+  color:#F9480F;
+}
+
+

@@ -6,12 +6,27 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Exit Plan</title>
+
+        <title>ExitPlan | About ExitPlan Parkour and Freerunning Tees</title>
+        <meta name="description" content="Welcome to ExitPlan a high quality producer of Parkour and Freerunning clothing.">
+        <meta property="og:title" content="ExitPlan | About ExitPlan Parkour and Freerunning Tees">
+        <meta property="og:description" content="Welcome to ExitPlan a high quality producer of Parkour and Freerunning clothing.">
+        <meta property="twitter:title" content="ExitPlan | About ExitPlan Parkour and Freerunning Tees">
+        <meta property="twitter:description" content="Welcome to ExitPlan a high quality producer of Parkour and Freerunning clothing.">
+
         <meta name="google-site-verification" content="hnACFoiV_0QxGTODChWzOMR0SeQfom1p8m8JPp-fPxA" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="favicon.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f9480f">
+        <meta name="theme-color" content="#ffffff">
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css">        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/home.css">     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
    		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -30,19 +45,25 @@
             We also have strong ethics and care deeply about the environment, so we ensure that all the clothing we produce fits these ideals. Every item is made sustainably and comes from ethical sources. 
             <br><br>
             All our designs, the images we take and the stories that we tell are focused on our principles, making sure that when you are decked in our gear it’s clear what you stand for.</p>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <h2 style="text-align: center;">Contact</h2>
-            <p style="text-align: center;">Email: info@exitplanclothing.com</p>
-            <p style="text-align: center; padding-bottom: 75px;">Tel: +44 (0)7835 248 548</p>
-
+            <div style="margin-top:100px" id="home-shop" class="section">
+                <a href="shop.html"><div class="section-break"></div></a>
+                <a href="#"><div class="shop-image"><div class="shop-image-cover"></div><h4>Caged Tee</h4></div></a>
+                <a href="#"><div class="shop-image"><div class="shop-image-cover"></div><h4>Skyscraper Tee</h4></div></a>
+                <a href="#"><div class="shop-image"><div class="shop-image-cover"></div><h4>Live To Move</h4></div></a>
+            </div>
+            <a id="footer" class="section" href="contact.html">
+                <h2 style="text-align:center">Contact Us</h2>
+            </a>
         </div>
 
+        
 
         <div id="navbar">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="portfolio.html">Lookbook</a></li>
                 <li><a href="shop.html">Shop</a></li>
+                <li><a href="lookbook.html">Lookbook</a></li>    
+                <li><a href="/blog">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li id="contact"><a href="#">Contact</a></li>
             </ul>
@@ -61,14 +82,25 @@
             <a href="https://www.instagram.com/exitplanclothing"><i id="instagram" class="fa fa-instagram" aria-hidden="true"></i></a>
         </div>
 
-        <a href="#"><div id="burger-menu">
+        <a><div id="burger-menu">
             <div id="line1" class="line"></div>
             <div id="line2" class="line"></div>
             <div id="line3" class="line"></div>
         </div></a>
 
-        <img id="logo" src="images/logo.png" alt="logo">
+        <a href="/"><img id="logo" src="images/logo.png" alt="logo"></a>
 
 		<script src="js/main.js"></script>
+        <script>
+            $( ".shop-image" ).hover(
+                function() {
+                    $(this).find(".shop-image-cover").animate({height: '100%'},1);
+                    $(this).find("h4").stop().delay(200).animate({opacity: '1'},1);
+                }, function() {
+                    $(this).find(".shop-image-cover").animate({height: '0%'},1);
+                    $(this).find("h4").stop().delay(200).animate({opacity: '0'},1);
+                }
+            );
+        </script>
     </body>
 </html>

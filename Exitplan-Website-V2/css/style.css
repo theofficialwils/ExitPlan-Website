@@ -1,3 +1,5 @@
+/*ORANGE: F9480F*/
+
 html,body {
   margin: 0;
   position: relative;
@@ -24,6 +26,7 @@ html,body {
 /****BURGER****/
 /**************/
 #burger-menu{
+  cursor: pointer;
   position: absolute;
   display: block;
   width:80px;
@@ -77,8 +80,10 @@ html,body {
 /***************/
 
 #contact-cross{
+  cursor: pointer;
   position: absolute;
-  bottom:100px;
+  display: block;
+  bottom:120px;
   left:50%;
   transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -95,7 +100,7 @@ html,body {
 
 #contact-cross-line1{
   position: absolute;
-  top:5px;
+  top:25px;
   left:5px;
   width:40px;
   height:3px;
@@ -111,7 +116,7 @@ html,body {
 
 #contact-cross-line2{
   position: absolute;
-  top:5px;
+  top:25px;
   left:5px;
   width:40px;
   height:3px;
@@ -471,6 +476,7 @@ html,body {
 }
 
 #cross{
+  cursor:pointer;
   position: absolute;
   right:20px;
   top:20px;
@@ -541,6 +547,7 @@ html,body {
 /***************/
 
 #chevron-right{
+  cursor: pointer;
   position: absolute;
   right:0;
   top:50%;
@@ -586,6 +593,7 @@ html,body {
 
 
 #chevron-left{
+  cursor: pointer;
   position: absolute;
   left:110px;
   top:50%;
@@ -1012,3 +1020,37 @@ html,body {
 
 
 
+#contact-page-text{
+  position: absolute;
+  display: block;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+  width:400px;
+  background:#1f1f1f;
+  color: white;
+  font-family: 'Homenaje', sans-serif;
+  font-size: 2em;
+  padding:200px;
+  opacity: 1;
+}
+
+#contact-page-text a{
+  text-decoration: none;
+  color: white;
+}
+
+#contact-page-text p{
+  text-align: center;
+
+  transition: all 1s, color 0.1s ease-in-out;
+}
+
+#contact-page-text p:hover{
+  color: #F9480F;
+}
