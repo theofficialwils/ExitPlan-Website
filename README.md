@@ -1,3 +1,3 @@
 # ExitPlan-Website
-[x] Update Website 
-[] Add fish
+- [x] Update Website 
+- [ ] Add fish
